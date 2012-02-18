@@ -7,6 +7,14 @@ Standards-Version: #POLICY#
 
 Package: #PACKAGE#
 Architecture: ${arch}
+Depends: #PACKAGE#${debianNameSuffix}, ${shlibs:Depends}, ${misc:Depends}
+XB-Conductor-Package: #PACKAGE#
+Description: ${shortdesc}
+ ${longdesc}
+
+Package: #PACKAGE#${debianNameSuffix}
+Architecture: ${arch}
 Depends: ${depends}, ${shlibs:Depends}, ${misc:Depends}
+XB-Conductor-Package: #PACKAGE#-
 Description: ${shortdesc}
  ${longdesc}
